@@ -75,18 +75,17 @@ textContainer.style.cssText = `
 textAbove.style.cssText = `
   position: absolute;
   top: 20px;
-  left: -160px;
+  left: -155px;
   font-size: 12px;
 `;
 
 link.style.cssText = `
   position: absolute;
-  top: 60px;
+  top: 40px;
   right: 10px;
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
-  white-space: nowrap;
 `;
 
 textAfter.style.cssText = `
