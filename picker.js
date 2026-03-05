@@ -70,7 +70,7 @@ textAfter.textContent = "!";
 const textContainer = document.createElement('div');
 textContainer.style.cssText = `
   position: absolute;
-  top: 20px;
+  top: 50px;
   right: 20px;
 `;
 textContainer.appendChild(textAbove);
@@ -103,9 +103,8 @@ closeBtn.style.cssText = `
   position: absolute;
   top: 8px;
   right: 10px;
-  background: red;
   border: 2px solid black;
-  color: white;
+  color: black;
   font-size: 18px;
   cursor: pointer;
   border-radius: 4px;
