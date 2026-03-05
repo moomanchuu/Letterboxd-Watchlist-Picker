@@ -74,33 +74,33 @@ textContainer.style.cssText = `
 
 textAbove.style.cssText = `
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: -160px;
-  font-size: 14px;
+  font-size: 12px;
 `;
 
 link.style.cssText = `
-  	position: absolute;
-  	top: 60px;
-  	left: 20px;
-  	font-size: 14px;
-  	font-weight: bold;
-  	text-decoration: none;
-	link.style.left = '';
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
 `;
 
 textAfter.style.cssText = `
   position: absolute;
   top: 100px;
   left: -100px;
-  font-size: 14px;
+  font-size: 12px;
 `;
 
 textClickme.style.cssText = `
   position: absolute;
   top: 140px;
   left: -120px;
-  font-size: 14px;
+  font-size: 12px;
 `;
 
 textAbove.style.whiteSpace = 'nowrap';
@@ -110,6 +110,7 @@ textAfter.style.whiteSpace = 'nowrap';
 textContainer.appendChild(textAbove);
 textContainer.appendChild(link);
 textContainer.appendChild(textAfter);
+textContainer.appendChild(textClickme);
 overlay.appendChild(textContainer);
 
 document.body.appendChild(overlay);
