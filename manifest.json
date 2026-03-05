@@ -10,12 +10,10 @@
     }
   ],
   "permissions": [
-    "storage"
-  ],
-  "host_permissions": [
+    "storage",
     "*://letterboxd.com/*"
   ],
   "background": {
-	  "scripts": ["background.js"]
-}
+    "scripts": ["background.js"]
+  }
 }
