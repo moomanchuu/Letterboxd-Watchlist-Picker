@@ -82,7 +82,7 @@ textAbove.style.cssText = `
 link.style.cssText = `
   position: absolute;
   top: 40px;
-  right: 80px;
+  right: 11px;
   width: 150px;
   text-align: center;
   font-size: 16px;
