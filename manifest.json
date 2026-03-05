@@ -14,5 +14,8 @@
   ],
   "host_permissions": [
     "*://letterboxd.com/*"
-  ]
+  ],
+  "background": {
+	  "scripts": ["background.js"]
+}
 }

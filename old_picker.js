@@ -1,15 +1,23 @@
 const username = window.location.pathname.split('/')[1]; 
 const EXPORT_URL = `https://letterboxd.com/${username}/watchlist/export/`;
 
-browser.runtime.sendMessage({ type: "FETCH_EXPORT", url: EXPORT_URL })
-  .then(response => {
-    const parsed = Papa.parse(response.text, { header: true, skipEmptyLines: true });
-    const data = parsed.data.map(row => ({
-      col2: row[Object.keys(row)[1]],
-      col4: row[Object.keys(row)[3]]
-    }));
+browser.runtime.sendMessage({ type: "FETCH_EXPORT", url: EXPORT_URL });
+
+
+fetch(EXPORT_URL)
+  .then(res => res.text())
+  .then(text => {
+    const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
+    const data = parsed.data.map(row => {
+      return {
+        col2: row["Name"],
+        col4: row["Letterboxd URL"]
+      };
+    });
     browser.storage.local.set({ exportedData: data });
-  });
+    console.log(data);
+  })
+  .catch(err => console.error("Fetch failed:", err));
 
 // Create button
 const button = document.createElement('button');
