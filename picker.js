@@ -45,14 +45,14 @@ overlay.style.backgroundImage = `url("${browser.runtime.getURL('gojo_nahidwin.pn
 overlay.style.backgroundSize = 'cover';
 overlay.style.backgroundPosition = 'center';
 overlay.style.width = '500px';
-overlay.style.height = '700px';
+overlay.style.height = '600px';
 
 const link = document.createElement('a');
 link.target = '_blank';
 //overlay.appendChild(link);
 //
 link.style.cssText = `
-  font-size: 20px;
+  font-size: 14px;
   font-weight: bold;
   text-decoration: none;
 `;
@@ -70,8 +70,8 @@ textAfter.textContent = "!";
 const textContainer = document.createElement('div');
 textContainer.style.cssText = `
   position: absolute;
-  top: 50px;
-  right: 20px;
+  top: 70px;
+  right: 25px;
 `;
 textContainer.appendChild(textAbove);
 textContainer.appendChild(link);
