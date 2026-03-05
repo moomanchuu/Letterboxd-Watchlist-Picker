@@ -21,10 +21,10 @@ fetch(EXPORT_URL)
 
 // Create button
 const button = document.createElement('button');
-button.textContent = 'Pick Random';
+button.textContent = 'Pick A Random Movie!';
 button.style.cssText = `
   position: fixed;
-  top: 20px;
+  top: 60px;
   right: 20px;
   z-index: 9999;
   padding: 10px 20px;
@@ -35,20 +35,40 @@ document.body.appendChild(button);
 // Create overlay
 const overlay = document.createElement('div');
 overlay.style.cssText = `
-  position: fixed;
-  top: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  z-index: 9999;
-  display: none;
+  	position: fixed;
+  	top: 50%;
+  	right: 50%;
+  	transform: translate(-50%, -50%);
+  	background: white;
+  	padding: 20px;
+  	border-radius: 8px;
+  	border: 1px solid #ccc;
+  	z-index: 9999;
+  	display: none;
+	overlay.style.width = '320px';
+	overlay.style.boxSizing = 'border-box';
 `;
 const link = document.createElement('a');
 link.target = '_blank';
+//overlay.appendChild(link);
+//
+link.style.cssText = `
+  font-size: 20px;
+  font-weight: bold;
+  color: #00c030;
+  text-decoration: none;
+`;
+
+const textAbove = document.createElement('p');
+textAbove.textContent = "Your random movie is...";
+overlay.appendChild(textAbove);
+
 overlay.appendChild(link);
+
+const textAfter = document.createElement('p');
+textAfter.textContent = "!";
+overlay.appendChild(textAfter);
+
 document.body.appendChild(overlay);
 
 // Button click handler
