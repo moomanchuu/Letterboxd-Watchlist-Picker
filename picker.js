@@ -46,6 +46,7 @@ overlay.style.cssText = `
   	z-index: 9999;
   	display: none;
 	overlay.style.width = '320px';
+	max-width: 90vw;
 	overlay.style.boxSizing = 'border-box';
 `;
 const link = document.createElement('a');
