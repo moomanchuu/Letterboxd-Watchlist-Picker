@@ -82,7 +82,7 @@ textAbove.style.cssText = `
 link.style.cssText = `
   position: absolute;
   top: 60px;
-  right: 1px;
+  right: 10px;
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
@@ -105,13 +105,13 @@ textClickme.style.cssText = `
 `;
 
 textAbove.style.whiteSpace = 'nowrap';
-link.style.whiteSpace = 'nowrap';
+// link.style.whiteSpace = 'nowrap';
 textAfter.style.whiteSpace = 'nowrap';
 
 textContainer.appendChild(textAbove);
 textContainer.appendChild(link);
-textContainer.appendChild(textAfter);
-textContainer.appendChild(textClickme);
+// textContainer.appendChild(textAfter);
+// textContainer.appendChild(textClickme);
 overlay.appendChild(textContainer);
 
 document.body.appendChild(overlay);
