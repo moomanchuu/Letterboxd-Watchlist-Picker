@@ -35,18 +35,12 @@ document.body.appendChild(button);
 // Create overlay
 const overlay = document.createElement('div');
 overlay.style.cssText = `
-  	position: fixed;
-  	top: 50%;
-  	right: 50%;
-  	transform: translate(-50%, -50%);
-  	background: white;
-  	padding: 20px;
-  	border-radius: 8px;
-  	border: 1px solid #ccc;
-  	z-index: 9999;
-  	display: none;
-	overlay.style.width = '320px';
-	max-width: 90vw;
+	overlay.style.position = 'fixed';
+	overlay.style.top = '50%';
+	overlay.style.left = '50%';
+	overlay.style.transform = 'translate(-50%, -50%)';
+	overlay.style.width = 'fit-content';
+	overlay.style.maxWidth = '80vw';
 	overlay.style.boxSizing = 'border-box';
 `;
 const link = document.createElement('a');
