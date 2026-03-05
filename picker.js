@@ -71,8 +71,8 @@ textContainer.style.cssText = `
 
 textAbove.style.cssText = `
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 0px;
+  left: -70px;
   font-size: 14px;
 `;
 
@@ -91,6 +91,10 @@ textAfter.style.cssText = `
   left: 20px;
   font-size: 14px;
 `;
+
+textAbove.style.whiteSpace = 'nowrap';
+link.style.whiteSpace = 'nowrap';
+textAfter.style.whiteSpace = 'nowrap';
 
 textContainer.appendChild(textAbove);
 textContainer.appendChild(link);
