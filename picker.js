@@ -97,16 +97,16 @@ button.addEventListener('click', () => {
   });
 });
 
-// const closeBtn = document.createElement('button');
-// closeBtn.textContent = '×';
-// closeBtn.style.cssText = `
-//   position: absolute;
-//   top: 8px;
-//   right: 10px;
-//   background: none;
-//   border: none;
-//   font-size: 18px;
-//   cursor: pointer;
-// `;
-// closeBtn.addEventListener('click', () => overlay.style.display = 'none');
-// overlay.appendChild(closeBtn);
+const closeBtn = document.createElement('button');
+closeBtn.textContent = '×';
+closeBtn.style.cssText = `
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+`;
+closeBtn.addEventListener('click', () => overlay.style.display = 'none');
+overlay.appendChild(closeBtn);
