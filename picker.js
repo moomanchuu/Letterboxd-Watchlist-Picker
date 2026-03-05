@@ -39,14 +39,15 @@ overlay.style.cssText = `
   	top: 50%;
   	left: 50%;
   	transform: translate(-50%, -50%);
-  	background: #1a1a1a;
+	overlay.style.backgroundImage = `url("${browser.runtime.getURL('image.jpg')}")`;
+	overlay.style.backgroundSize = 'cover';
+	overlay.style.backgroundPosition = 'center';
   	color: #e0e0e0;
   	padding: 30px 36px;
   	border-radius: 10px;
   	border: 1px solid #333;
   	z-index: 99999;
   	display: none;
-  	width: 320px;
   	box-sizing: border-box;
   	text-align: center;
   	font-family: 'Georgia', serif;
@@ -58,19 +59,29 @@ link.target = '_blank';
 link.style.cssText = `
   font-size: 20px;
   font-weight: bold;
-  color: #00c030;
   text-decoration: none;
 `;
 
 const textAbove = document.createElement('p');
 textAbove.textContent = "Your random movie is...";
-overlay.appendChild(textAbove);
-
-overlay.appendChild(link);
-
+// overlay.appendChild(textAbove);
+// 
+// overlay.appendChild(link);
+// 
 const textAfter = document.createElement('p');
 textAfter.textContent = "!";
-overlay.appendChild(textAfter);
+// overlay.appendChild(textAfter);
+
+const textContainer = document.createElement('div');
+textContainer.style.cssText = `
+  position: absolute;
+  top: 20px;
+  left: 20px;
+`;
+textContainer.appendChild(textAbove);
+textContainer.appendChild(link);
+textContainer.appendChild(textAfter);
+overlay.appendChild(textContainer);
 
 document.body.appendChild(overlay);
 
@@ -90,3 +101,17 @@ button.addEventListener('click', () => {
     overlay.style.transform = 'none';
   });
 });
+
+const closeBtn = document.createElement('button');
+closeBtn.textContent = '×';
+closeBtn.style.cssText = `
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+`;
+closeBtn.addEventListener('click', () => overlay.style.display = 'none');
+overlay.appendChild(closeBtn);
