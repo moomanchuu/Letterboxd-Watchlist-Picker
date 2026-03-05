@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Letterboxd Picker",
+  "version": "1.0",
+  "description": "Randomly Selects a movie from your Watchlist!",
+  "content_scripts": [
+    {
+      "matches": ["*://letterboxd.com/*/watchlist/*"],
+      "js": ["papaparse.min.js", "picker.js"]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://letterboxd.com/*"
+  ]
+}
