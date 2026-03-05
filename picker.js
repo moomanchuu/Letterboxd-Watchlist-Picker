@@ -82,7 +82,7 @@ textAbove.style.cssText = `
 link.style.cssText = `
   position: absolute;
   top: 60px;
-  right: 0px;
+  right: 1px;
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
@@ -90,10 +90,11 @@ link.style.cssText = `
 `;
 
 textAfter.style.cssText = `
-  position: absolute;
-  top: 100px;
-  left: -100px;
-  font-size: 12px;
+  	position: absolute;
+  	top: 100px;
+  	left: -140px;
+  	font-size: 12px;
+	white-space: nowrap;
 `;
 
 textClickme.style.cssText = `
