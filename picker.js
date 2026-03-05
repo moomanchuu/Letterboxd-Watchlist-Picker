@@ -39,7 +39,7 @@ overlay.style.cssText = `
   	top: 50%;
   	left: 50%;
   	transform: translate(-50%, -50%);
-	overlay.style.backgroundImage = `url("${browser.runtime.getURL('image.jpg')}")`;
+	overlay.style.backgroundImage = `url("${browser.runtime.getURL('gojo_nahidwin.png')}")`;
 	overlay.style.backgroundSize = 'cover';
 	overlay.style.backgroundPosition = 'center';
   	color: #e0e0e0;
