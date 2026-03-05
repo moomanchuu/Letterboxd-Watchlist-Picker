@@ -35,13 +35,21 @@ document.body.appendChild(button);
 // Create overlay
 const overlay = document.createElement('div');
 overlay.style.cssText = `
-	overlay.style.position = 'fixed';
-	overlay.style.top = '50%';
-	overlay.style.left = '50%';
-	overlay.style.transform = 'translate(-50%, -50%)';
-	overlay.style.width = 'fit-content';
-	overlay.style.maxWidth = '80vw';
-	overlay.style.boxSizing = 'border-box';
+	position: fixed;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	background: #1a1a1a;
+  	color: #e0e0e0;
+  	padding: 30px 36px;
+  	border-radius: 10px;
+  	border: 1px solid #333;
+  	z-index: 99999;
+  	display: none;
+  	width: 320px;
+  	box-sizing: border-box;
+  	text-align: center;
+  	font-family: 'Georgia', serif;
 `;
 const link = document.createElement('a');
 link.target = '_blank';
@@ -73,5 +81,12 @@ button.addEventListener('click', () => {
     link.textContent = random.col2;
     link.href = random.col4;
     overlay.style.display = 'block';
+
+
+    const w = overlay.offsetWidth;
+    const h = overlay.offsetHeight;
+    overlay.style.left = `calc(50vw - ${w / 2}px)`;
+    overlay.style.top = `calc(50vh - ${h / 2}px`;
+    overlay.style.transform = 'none';
   });
 });
