@@ -45,7 +45,7 @@ overlay.style.backgroundImage = `url("${browser.runtime.getURL('gojo_nahidwin.pn
 overlay.style.backgroundSize = 'cover';
 overlay.style.backgroundPosition = 'center';
 overlay.style.width = '500px';
-overlay.style.height = '800px';
+overlay.style.height = '700px';
 
 const link = document.createElement('a');
 link.target = '_blank';
@@ -103,10 +103,12 @@ closeBtn.style.cssText = `
   position: absolute;
   top: 8px;
   right: 10px;
-  background: none;
-  border: none;
+  background: red;
+  border: 2px solid black;
+  color: white;
   font-size: 18px;
   cursor: pointer;
+  border-radius: 4px;
 `;
 closeBtn.addEventListener('click', () => overlay.style.display = 'none');
 overlay.appendChild(closeBtn);
