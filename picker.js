@@ -44,8 +44,8 @@ overlay.style.cssText = `
 overlay.style.backgroundImage = `url("${browser.runtime.getURL('gojo_nahidwin.png')}")`;
 overlay.style.backgroundSize = 'cover';
 overlay.style.backgroundPosition = 'center';
-overlay.style.width = '500px';
-overlay.style.height = '650px';
+overlay.style.width = '550px';
+overlay.style.height = '750px';
 
 const link = document.createElement('a');
 link.target = '_blank';
@@ -61,6 +61,9 @@ textAbove.textContent = "Your random movie is...";
 const textAfter = document.createElement('p');
 textAfter.textContent = "!";
 // overlay.appendChild(textAfter);
+//
+const textClickme = document.createElement('p');
+textClickme.textContent = "Click the movie name :)";
 
 const textContainer = document.createElement('div');
 textContainer.style.cssText = `
@@ -71,24 +74,32 @@ textContainer.style.cssText = `
 
 textAbove.style.cssText = `
   position: absolute;
-  top: 0px;
-  left: -70px;
+  top: 10px;
+  left: -160px;
   font-size: 14px;
 `;
 
 link.style.cssText = `
-  position: absolute;
-  top: 60px;
-  left: 20px;
-  font-size: 14px;
-  font-weight: bold;
-  text-decoration: none;
+  	position: absolute;
+  	top: 60px;
+  	left: 20px;
+  	font-size: 14px;
+  	font-weight: bold;
+  	text-decoration: none;
+	link.style.left = '';
 `;
 
 textAfter.style.cssText = `
   position: absolute;
   top: 100px;
-  left: 20px;
+  left: -100px;
+  font-size: 14px;
+`;
+
+textClickme.style.cssText = `
+  position: absolute;
+  top: 140px;
+  left: -120px;
   font-size: 14px;
 `;
 
