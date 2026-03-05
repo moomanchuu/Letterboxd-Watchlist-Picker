@@ -45,17 +45,12 @@ overlay.style.backgroundImage = `url("${browser.runtime.getURL('gojo_nahidwin.pn
 overlay.style.backgroundSize = 'cover';
 overlay.style.backgroundPosition = 'center';
 overlay.style.width = '500px';
-overlay.style.height = '600px';
+overlay.style.height = '650px';
 
 const link = document.createElement('a');
 link.target = '_blank';
 //overlay.appendChild(link);
 //
-link.style.cssText = `
-  font-size: 14px;
-  font-weight: bold;
-  text-decoration: none;
-`;
 
 const textAbove = document.createElement('p');
 textAbove.textContent = "Your random movie is...";
@@ -73,6 +68,30 @@ textContainer.style.cssText = `
   top: 70px;
   right: 25px;
 `;
+
+textAbove.style.cssText = `
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 14px;
+`;
+
+link.style.cssText = `
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+`;
+
+textAfter.style.cssText = `
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  font-size: 14px;
+`;
+
 textContainer.appendChild(textAbove);
 textContainer.appendChild(link);
 textContainer.appendChild(textAfter);
