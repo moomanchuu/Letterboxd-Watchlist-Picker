@@ -44,6 +44,8 @@ overlay.style.cssText = `
 overlay.style.backgroundImage = `url("${browser.runtime.getURL('gojo_nahidwin.png')}")`;
 overlay.style.backgroundSize = 'cover';
 overlay.style.backgroundPosition = 'center';
+overlay.style.width = '500px';
+overlay.style.height = '400px';
 
 const link = document.createElement('a');
 link.target = '_blank';
